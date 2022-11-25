@@ -1,1 +1,1 @@
-# go-cli-playground
+# go-playground
