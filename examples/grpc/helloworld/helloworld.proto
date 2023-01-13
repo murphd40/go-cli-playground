@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "github.com/murphd40/go-playground/examples/grpc/helloworld";
+
+package helloworld;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc Chat (stream ClientChat) returns (stream ServerChat);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
+message ServerChat {
+  string message = 1;
+}
+
+message ClientChat {
+  string message = 1;
+}
