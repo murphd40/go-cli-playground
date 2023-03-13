@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/murphd40/go-playground/examples/grpc/pullserver/proto";
+
+package proto;
+
+service GenericStream {
+  rpc Connect(stream ClientMessage) returns (stream ServerMessage);
+}
+
+enum Request {
+  HEALTH = 0;
+  ECHO = 1;
+}
+
+message ClientMessage {
+  bytes body = 1;
+}
+
+message ServerMessage {
+  Request request = 1;
+  bytes body = 2;
+}

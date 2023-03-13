@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	pb "github.com/murphd40/go-playground/examples/grpc/helloworld"
+	pb "github.com/murphd40/go-playground/examples/grpc/helloworld/proto"
 	"google.golang.org/grpc"
 )
 

@@ -33,6 +33,7 @@ $(PROTOC_GEN_GO_GRPC): $(LOCALBIN)
 
 .PHONY: generate
 generate: protoc protoc-gen-go protoc-gen-go-grpc
-	@PATH=$(PATH):$(LOCALBIN) $(PROTOC) --go_out=. --go_opt=paths=source_relative examples/grpc/helloworld/helloworld.proto --go-grpc_out=. --go-grpc_opt=paths=source_relative
+	@PATH=$(PATH):$(LOCALBIN) $(PROTOC) --go_out=. --go_opt=paths=source_relative examples/grpc/helloworld/proto/helloworld.proto --go-grpc_out=. --go-grpc_opt=paths=source_relative
+	@PATH=$(PATH):$(LOCALBIN) $(PROTOC) --go_out=. --go_opt=paths=source_relative examples/grpc/pullserver/proto/pullserver.proto --go-grpc_out=. --go-grpc_opt=paths=source_relative
 
 
