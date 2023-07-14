@@ -21,7 +21,7 @@ func main() {
 
 	// use discovery client to discover replica sets
 	mapper := restmapper.NewDeferredDiscoveryRESTMapper(d)
-	r, err := mapper.ResourceFor(schema.GroupVersionResource{Resource: "ReplicaSet"})
+	r, err := mapper.ResourceFor(schema.GroupVersionResource{Resource: "ClusterServiceVersion"})
 	failOnError(err)
 
 	log.Println(r)
